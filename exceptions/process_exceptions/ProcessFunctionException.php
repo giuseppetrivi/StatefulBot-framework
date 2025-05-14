@@ -1,0 +1,20 @@
+<?php
+
+namespace TGBot\exceptions\process_exceptions;
+
+use Exception;
+
+
+class ProcessFunctionException extends Exception {
+
+  protected const DEFAULT_MESSAGE = "Something went wrong in process function callback";
+
+  public function __construct($message=ProcessFunctionException::DEFAULT_MESSAGE, $code=0, $previous=null) {
+
+    parent::__construct($message, $code, $previous);
+
+  }
+  
+}
+
+?>

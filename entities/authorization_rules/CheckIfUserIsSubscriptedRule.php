@@ -1,0 +1,27 @@
+<?php
+
+namespace TGBot\entities\authorization_rules;
+
+use TGBot\entities\User;
+
+
+/**
+ * Rule to check if the user is subscripted to bot (from user info)
+ */
+class CheckIfUserIsSubscriptedRule extends Rule {
+
+  public function __construct(User $_User) {
+    parent::__construct($_User);
+  }
+
+  public function rule() {
+    $_User = $this->getValidationClass();
+    if ($_User->isSubscripted()) {
+      return true;
+    }
+    return false;
+  }
+
+}
+
+?>
