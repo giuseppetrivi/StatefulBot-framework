@@ -11,6 +11,7 @@ use Telegram\Bot\HttpClients\HttpClientInterface;
 use Telegram\Bot\Methods\Chat;
 use Telegram\Bot\Methods\Commands;
 use Telegram\Bot\Methods\EditMessage;
+use Telegram\Bot\Methods\Forum;
 use Telegram\Bot\Methods\Game;
 use Telegram\Bot\Methods\Get;
 use Telegram\Bot\Methods\Location;
@@ -35,6 +36,7 @@ class Api
     use Commands;
     use CommandsHandler;
     use EditMessage;
+    use Forum;
     use Game;
     use Get;
     use HasContainer;
