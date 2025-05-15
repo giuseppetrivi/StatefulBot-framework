@@ -1,9 +1,9 @@
 <?php
 
-namespace TGBot\entities;
+namespace CustomBotName\entities;
 
 use Error;
-use TGBot\exceptions\BaseEntityException;
+use CustomBotName\exceptions\BaseEntityException;
 
 
 /**

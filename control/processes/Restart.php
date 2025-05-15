@@ -1,8 +1,8 @@
 <?php
 
-use TGBot\view;
-use TGBot\control\AbstractProcess;
-use TGBot\view\Keyboards;
+use CustomBotName\view;
+use CustomBotName\control\AbstractProcess;
+use CustomBotName\view\Keyboards;
 
 
 /**

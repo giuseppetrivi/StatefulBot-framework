@@ -2,8 +2,8 @@
 
 namespace FirstPath;
 
-use TGBot\control\AbstractProcess;
-use TGBot\view\MenuOptions;
+use CustomBotName\control\AbstractProcess;
+use CustomBotName\view\MenuOptions;
 
 class SameNameClass extends AbstractProcess {
 

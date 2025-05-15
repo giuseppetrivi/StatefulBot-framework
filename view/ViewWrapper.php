@@ -1,9 +1,9 @@
 <?php
 
-namespace TGBot\view;
+namespace CustomBotName\view;
 
 use Error;
-use TGBot\exceptions\ViewException;
+use CustomBotName\exceptions\ViewException;
 use ReflectionClass;
 
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace TGBot\entities;
+namespace CustomBotName\entities;
 
-use TGBot\exceptions\RuleException;
-use TGBot\config\ConfigurationHandler;
-use TGBot\entities\authorization_rules\Rule;
-use TGBot\entities\authorization_rules\CheckIfBotIsOpenToAccessRule;
+use CustomBotName\exceptions\RuleException;
+use CustomBotName\config\ConfigurationHandler;
+use CustomBotName\entities\authorization_rules\Rule;
+use CustomBotName\entities\authorization_rules\CheckIfBotIsOpenToAccessRule;
 
 
 /**

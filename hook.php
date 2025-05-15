@@ -8,7 +8,7 @@ require_once __DIR__ . "/project_autoloader.php";
 require_once __DIR__ . "/control/processes_autoloader.php";
 
 
-use TGBot\init\Init;
+use CustomBotName\init\Init;
 
 
 $development_mode = "testing";

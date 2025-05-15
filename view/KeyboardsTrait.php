@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\view;
+namespace CustomBotName\view;
 
 use Telegram\Bot\Keyboard\Keyboard;
 

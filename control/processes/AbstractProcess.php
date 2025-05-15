@@ -1,9 +1,9 @@
 <?php
 
-namespace TGBot\control;
+namespace CustomBotName\control;
 
-use TGBot\exceptions\process_exceptions\ProcessFunctionException;
-use TGBot\exceptions\process_exceptions\ProcessInputException;
+use CustomBotName\exceptions\process_exceptions\ProcessFunctionException;
+use CustomBotName\exceptions\process_exceptions\ProcessInputException;
 
 /**
  * Base class to handle processes.

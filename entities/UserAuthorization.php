@@ -1,11 +1,11 @@
 <?php
 
-namespace TGBot\entities;
+namespace CustomBotName\entities;
 
-use TGBot\exceptions\RuleException;
-use TGBot\entities\authorization_rules\Rule;
-use TGBot\entities\authorization_rules\CheckIfUserIsActiveRule;
-use TGBot\entities\authorization_rules\CheckIfUserIsSubscriptedRule;
+use CustomBotName\exceptions\RuleException;
+use CustomBotName\entities\authorization_rules\Rule;
+use CustomBotName\entities\authorization_rules\CheckIfUserIsActiveRule;
+use CustomBotName\entities\authorization_rules\CheckIfUserIsSubscriptedRule;
 
 
 /**

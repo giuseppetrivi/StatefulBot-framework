@@ -1,9 +1,9 @@
 <?php
 
-namespace TGBot\entities\authorization_rules;
+namespace CustomBotName\entities\authorization_rules;
 
 use ReflectionClass;
-use TGBot\entities\BaseEntity;
+use CustomBotName\entities\BaseEntity;
 
 
 /**

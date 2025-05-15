@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\exceptions;
+namespace CustomBotName\exceptions;
 
 use Exception;
 

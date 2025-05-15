@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\view;
+namespace CustomBotName\view;
 
 /**
  * Class to handle all inline keyboards 

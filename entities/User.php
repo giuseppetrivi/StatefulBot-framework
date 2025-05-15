@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\entities;
+namespace CustomBotName\entities;
 
 
 /**

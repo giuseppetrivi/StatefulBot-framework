@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\entities\authorization_rules;
+namespace CustomBotName\entities\authorization_rules;
 
 
 /**

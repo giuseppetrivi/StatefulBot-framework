@@ -1,8 +1,8 @@
 <?php
 
-namespace TGBot\entities\telegrambot_sdk_interface;
+namespace CustomBotName\entities\telegrambot_sdk_interface;
 
-use TGBot\entities\BaseEntity;
+use CustomBotName\entities\BaseEntity;
 
 
 /**

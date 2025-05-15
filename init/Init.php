@@ -1,16 +1,16 @@
 <?php
 
-namespace TGBot\init;
+namespace CustomBotName\init;
 
 use DB;
 use Exception;
-use TGBot\config\ConfigurationHandler;
-use TGBot\entities\telegrambot_sdk_interface\TelegramBotSdkCustomInterface;
-use TGBot\entities\User;
-use TGBot\entities\BotAuthorization;
-use TGBot\entities\UserAuthorization;
+use CustomBotName\config\ConfigurationHandler;
+use CustomBotName\entities\telegrambot_sdk_interface\TelegramBotSdkCustomInterface;
+use CustomBotName\entities\User;
+use CustomBotName\entities\BotAuthorization;
+use CustomBotName\entities\UserAuthorization;
 use Restart;
-use TGBot\exceptions\process_exceptions\ProcessInputException;
+use CustomBotName\exceptions\process_exceptions\ProcessInputException;
 
 class Init {
 

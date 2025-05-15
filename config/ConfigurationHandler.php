@@ -1,8 +1,8 @@
 <?php
 
-namespace TGBot\config;
+namespace CustomBotName\config;
 
-use TGBot\exceptions\ConfigurationException;
+use CustomBotName\exceptions\ConfigurationException;
 
 
 /**

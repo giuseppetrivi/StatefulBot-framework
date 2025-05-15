@@ -1,8 +1,8 @@
 <?php
 
-namespace TGBot\entities\authorization_rules;
+namespace CustomBotName\entities\authorization_rules;
 
-use TGBot\entities\User;
+use CustomBotName\entities\User;
 
 
 /**

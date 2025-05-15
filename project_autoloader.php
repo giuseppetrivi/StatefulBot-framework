@@ -151,7 +151,7 @@ class Psr4AutoloaderClass {
 
 $_Psr4AutoloaderClass = new Psr4AutoloaderClass();
 /** namespace prefix */
-$_Psr4AutoloaderClass->addNamespace("TGBot", __DIR__); // TODO: change TGBot in BotName
+$_Psr4AutoloaderClass->addNamespace("CustomBotName", __DIR__);
 /** register the standard autoloader */
 $_Psr4AutoloaderClass->register();
 

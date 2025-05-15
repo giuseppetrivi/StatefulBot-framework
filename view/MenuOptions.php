@@ -1,6 +1,6 @@
 <?php
 
-namespace TGBot\view;
+namespace CustomBotName\view;
 
 /**
  * Final class containing all menu options constants
