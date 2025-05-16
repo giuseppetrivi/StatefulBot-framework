@@ -8,7 +8,7 @@ use CustomBotName\entities\User;
 /**
  * Rule to check if the user is subscripted to bot (from user info)
  */
-class CheckIfUserIsSubscriptedRule extends Rule {
+class CheckIfUserIsSubscribedRule extends Rule {
 
   public function __construct(User $_User) {
     parent::__construct($_User);
