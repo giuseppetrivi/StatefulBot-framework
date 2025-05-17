@@ -23,7 +23,7 @@ The steps to get this framework ready and to start developing your Telegram Bot 
 - Download and install [PHP](https://www.php.net/) and [Composer](https://getcomposer.org/). You'll use Composer to eventually update packages.
 - Clone this repository on your server (or locally) with the following command: 
 ```bash
-git clone https://github.com/giuseppetrivi/telegram-bot-basic-project-structure.git
+git clone https://github.com/giuseppetrivi/StatefulBot-framework.git
 ```
 - Create a Telegram Bot via [@BotFather](https://t.me/BotFather) ([here is a simple guide](https://deepakmohansingh.medium.com/how-to-build-a-telegram-bot-using-php-absolute-beginner-guide-f4262174442d)). 
 - Set the webhook to the `hook.php` file and fill the `config.json` file with necessary information (like Telegram Bot API token).
