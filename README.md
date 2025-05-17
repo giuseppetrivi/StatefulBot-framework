@@ -9,7 +9,7 @@
 
 <br>
 
-**StatefulBot** is a PHP framework to easily create a Telegram Bot. This framework is **built specifically to solve the state management problems**!
+**StatefulBot** is a PHP framework to easily create a Telegram Bot. This framework is **specifically built to solve the state management problems**!
 
 Through the [wiki](https://github.com/giuseppetrivi/telegram-bot-basic-project-structure/wiki) you'll find out how to use it, some basic architectural aspects and all the implementation specifications. <br>
 You'll finally understand how to use the framework to easily create complex Telegram Bots.
