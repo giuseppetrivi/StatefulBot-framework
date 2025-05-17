@@ -1,12 +1,13 @@
 # 👾 StatefulBot - a PHP Telegram Bot framework
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/irazasyed/telegram-bot-sdk.svg?style=flat-square)](https://packagist.org/packages/irazasyed/telegram-bot-sdk)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sergeytsalkov/meekrodb.svg?style=flat-square)](https://packagist.org/packages/sergeytsalkov/meekrodb)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
-[![Used with Composer](https://img.shields.io/badge/Packagist-composer-blue?style=flat&logo=composer)](https://getcomposer.org/)
-[![Written in PHP](https://img.shields.io/badge/Language-PHP-777BB4?style=flat&logo=php)](https://www.php.net/)
-[![PHP Version](https://img.shields.io/packagist/php-v/irazasyed/telegram-bot-sdk.svg?style=flat)](https://www.php.net/)
+![Static Badge](https://img.shields.io/badge/PHP-8.2.12-%23777BB4?style=flat&logo=php&logoSize=auto&link=https%3A%2F%2Fwww.php.net%2F)
+![Static Badge](https://img.shields.io/badge/Composer-2.6.5-%23885630?style=flat&logo=composer&logoSize=auto&link=https%3A%2F%2Fgetcomposer.org%2F)
 
+![Static Badge](https://img.shields.io/badge/irazasyed%2Ftelegrambotsdk-3.13-%2326A5E4?style=flat&logo=packagist&logoSize=auto&link=https%3A%2F%2Fgetcomposer.org%2F)
+![Static Badge](https://img.shields.io/badge/SergeyTsalkov%2Fmeekrodb-2.5-%23003B57?style=flat&logo=packagist&logoSize=auto&link=https%3A%2F%2Fgithub.com%2FSergeyTsalkov%2Fmeekrodb)
+![Static Badge](https://img.shields.io/badge/phpunit%2Fphpunit-11.5-%23777BB4?style=flat&logo=packagist&logoSize=auto&link=https%3A%2F%2Fdocs.phpunit.de%2Fen%2F11.5%2F)
+
+<br>
 
 **StatefulBot** is a PHP framework to easily create a Telegram Bot. This framework is **built specifically to solve the state management problems**!
 
