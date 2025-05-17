@@ -1,4 +1,13 @@
 # 👾 StatefulBot - a PHP Telegram Bot framework
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/irazasyed/telegram-bot-sdk.svg?style=flat-square)](https://packagist.org/packages/irazasyed/telegram-bot-sdk)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sergeytsalkov/meekrodb.svg?style=flat-square)](https://packagist.org/packages/sergeytsalkov/meekrodb)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
+[![Used with Composer](https://img.shields.io/badge/Packagist-composer-blue?style=flat&logo=composer)](https://getcomposer.org/)
+[![Written in PHP](https://img.shields.io/badge/Language-PHP-777BB4?style=flat&logo=php)](https://www.php.net/)
+[![PHP Version](https://img.shields.io/packagist/php-v/irazasyed/telegram-bot-sdk.svg?style=flat)](https://www.php.net/)
+
+
 **StatefulBot** is a PHP framework to easily create a Telegram Bot. This framework is **built specifically to solve the state management problems**!
 
 Through the [wiki](https://github.com/giuseppetrivi/telegram-bot-basic-project-structure/wiki) you'll find out how to use it, some basic architectural aspects and all the implementation specifications. <br>
