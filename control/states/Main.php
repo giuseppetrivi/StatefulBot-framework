@@ -1,14 +1,14 @@
 <?php
 
 use CustomBotName\view;
-use CustomBotName\control\AbstractProcess;
+use CustomBotName\control\AbstractState;
 use CustomBotName\view\Keyboards;
 
 
 /**
  * 
  */
-class Main extends AbstractProcess {
+class Main extends AbstractState {
 
   protected array $valid_static_inputs = [
     view\MenuOptions::COMMAND_START => "startProcedure"

@@ -10,7 +10,7 @@ namespace CustomBotName\entities;
 class User extends BaseEntity {
 
   protected int $user_id;
-  protected ?ProcessHandler $_ProcessHandler = null;
+  protected ?StateHandler $_StateHandler = null;
 
 
   /**
@@ -20,7 +20,7 @@ class User extends BaseEntity {
     /** db query to get unique user info */
     
     $this->setUserId($user_id);
-    $this->setProcessHandler(new ProcessHandler($this->getUserId()));
+    $this->setStateHandler(new StateHandler($this->getUserId()));
   }
 
 

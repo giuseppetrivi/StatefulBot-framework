@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Processes autoloader, that is different from the PSR-4 autoloader standard
+ * States autoloader, that is different from the PSR-4 autoloader standard
  */
 
 spl_autoload_register(function($class) {
   $exploded_classname = explode("\\", $class);
-  $count_subprocesses = count($exploded_classname);
-  $relative_classname = $exploded_classname[$count_subprocesses - 1];
+  $count_substates = count($exploded_classname);
+  $relative_classname = $exploded_classname[$count_substates - 1];
 
-  $directory_where_search = __DIR__ . DIRECTORY_SEPARATOR . "processes" . DIRECTORY_SEPARATOR;
+  $directory_where_search = __DIR__ . DIRECTORY_SEPARATOR . "states" . DIRECTORY_SEPARATOR;
 
   $_RDI = new RecursiveDirectoryIterator($directory_where_search);
   $_RII = new RecursiveIteratorIterator($_RDI);

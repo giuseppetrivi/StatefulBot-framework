@@ -2,28 +2,28 @@
 
 namespace CustomBotName\control;
 
-use CustomBotName\exceptions\process_exceptions\ProcessFunctionException;
-use CustomBotName\exceptions\process_exceptions\ProcessInputException;
+use CustomBotName\exceptions\state_exceptions\StateFunctionException;
+use CustomBotName\exceptions\state_exceptions\StateInputException;
 
 /**
- * Base class to handle processes.
+ * Base class to handle states.
  * 
  * The logic is this:
- * Every process has its pre-conditions, based on the validity of inputs.
+ * Every state has its pre-conditions, based on the validity of inputs.
  * Inputs can be verified statically or dinamically.
  * 
- * Then there is the core code of the process, that depends on the input
+ * Then there is the core code of the state, that depends on the input
  * 
- * Finally, there is the only post-condition that is the change of the status
- * in the database row for the process
+ * Finally, there is the only post-condition that is the change of the state
+ * in the database
  */
-abstract class AbstractProcess {
+abstract class AbstractState {
   protected $_Bot;
   protected $_User;
 
   /**
    * Array of all valid inputs possibile for the current specific
-   * process
+   * state
    * [SHOULD BE OVERRIDDEN]
    */
   protected array $valid_static_inputs = [];
@@ -34,16 +34,16 @@ abstract class AbstractProcess {
   protected string|null $function_to_call = null;
 
   /**
-   * Next process to be setted in the database at the end of all
-   * the core code of the current process. If null it will delete
-   * the record process in the database. This means that the next
-   * process will be the start menu
+   * Next state to be setted in the database at the end of all
+   * the core code of the current state. If null it will delete
+   * the state record in the database. This means that the next
+   * state will be the start menu
    */
-  protected string|null $process_name = null;
+  protected string|null $state_name = null;
   /**
-   * Data to be setted fo the next process. If null, it will be empty
+   * Data to be setted fo the next state. If null, it will be empty
    */
-  protected string|null $process_data = null;
+  protected string|null $state_data = null;
 
   /**
    * @param TelegramBotSdkCustomInterface $_Bot
@@ -86,50 +86,50 @@ abstract class AbstractProcess {
 
 
   /**
-   * From the name of the process, deletes the last one to get
-   * the previous process name
+   * From the name of the state, deletes the last one to get
+   * the previous state name
    * 
    * @return array
    */
-  protected function getPreviousProcess() {
+  protected function getPreviousState() {
     $classname_complete = get_class($this);
 
-    $array_pf_processes = explode("\\", $classname_complete);
-    array_pop($array_pf_processes);
-    return implode("\\", $array_pf_processes);
+    $array_pf_states = explode("\\", $classname_complete);
+    array_pop($array_pf_states);
+    return implode("\\", $array_pf_states);
   }
 
   /**
-   * Append the parameter "next_process" to the actual process
+   * Append the parameter "next_state" to the actual state
    * 
-   * @param string $next_process
+   * @param string $next_state
    * @return string
    */
-  protected function appendNextProcess($next_process) {
-    return get_class($this) . "\\" . $next_process;
+  protected function appendNextState($next_state) {
+    return get_class($this) . "\\" . $next_state;
   }
 
   /**
-   * Set the next_process attribute
+   * Set the next_state attribute
    */
-  protected function setNextProcess($process_name=null, $process_data=null) {
-    $this->process_name = $process_name;
-    $this->process_data = $process_data;
+  protected function setNextState($state_name=null, $state_data=null) {
+    $this->state_name = $state_name;
+    $this->state_data = $state_data;
   }
 
   /**
-   * Change the process into the database to set it to the next
-   * process (eventually also with data)
+   * Change the state into the database to set it to the next
+   * state (eventually also with data)
    */
-  private function changeProcess() {
-    $this->_User->getProcessHandler()->updateProcess($this->process_name);
-    $this->_User->getProcessHandler()->updateProcess($this->process_data);
+  private function changeState() {
+    $this->_User->getStateHandler()->updateState($this->state_name);
+    $this->_User->getStateHandler()->updateState($this->state_data);
   }
 
 
 
   /**
-   * Verifies the validity of the input of the process, to satify its
+   * Verifies the validity of the input of the state, to satify its
    * pre-conditions
    * This has also to set the specific procedure to be executed in the
    * mainCode block
@@ -141,19 +141,19 @@ abstract class AbstractProcess {
     if ($check_static_inputs==false) {
       $check_dynamic_inputs = $this->validateDynamicInputs();
       if ($check_dynamic_inputs==false) {
-        throw new ProcessInputException("Input doesn't match any of the static and dynamic inputs of this process");
+        throw new StateInputException("Input doesn't match any of the static and dynamic inputs of this state");
       }
     }
 
     if ($this->function_to_call==null) {
-      throw new ProcessFunctionException("Function to call is null");
+      throw new StateFunctionException("Function to call is null");
     }
 
     return true;
   }
 
   /**
-   * Contains the core code to execute the actions of the process.
+   * Contains the core code to execute the actions of the state.
    * There is the standard call to the function to execute setted
    * by the pre-condition check
    */
@@ -163,20 +163,20 @@ abstract class AbstractProcess {
 
   /**
    * Verify all the post-conditions, starting from the
-   * change of the process
+   * change of the state
    */
-  protected function postConditionProcess() {
-    $this->changeProcess();
+  protected function postConditionState() {
+    $this->changeState();
   }
 
   /**
-   * Function visible from outside the boundaries of Process class
+   * Function visible from outside the boundaries of State class
    * that executes the code with pre and post-conditions
    */
   public function codeToRun() {
     $this->preConditionInput();
     $this->mainCode();
-    $this->postConditionProcess();
+    $this->postConditionState();
   }
 
 

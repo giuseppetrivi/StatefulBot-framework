@@ -1,11 +1,11 @@
 <?php
 
-namespace SecondPath;
+namespace FirstPath;
 
-use CustomBotName\control\AbstractProcess;
+use CustomBotName\control\AbstractState;
 use CustomBotName\view\MenuOptions;
 
-class SameNameClass extends AbstractProcess {
+class SameNameClass extends AbstractState {
 
   protected array $valid_static_inputs = [
     MenuOptions::COMMAND_START => "mainCode"
