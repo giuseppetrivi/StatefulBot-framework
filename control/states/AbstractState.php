@@ -110,6 +110,13 @@ abstract class AbstractState {
   }
 
   /**
+   * Keeps the actual state
+   */
+  protected function keepThisState() {
+    $this->state_name = get_class($this);
+  }
+
+  /**
    * Set the next_state attribute
    */
   protected function setNextState($state_name=null, $state_data=null) {
@@ -159,6 +166,13 @@ abstract class AbstractState {
    */
   protected function mainCode() {
     call_user_func(array($this, $this->function_to_call));
+  }
+
+  /**
+   * Empty procedure to simply not do anything
+   */
+  protected function emptyProcedure() {
+    $this->keepThisState();
   }
 
   /**
