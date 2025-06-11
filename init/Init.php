@@ -10,7 +10,7 @@ use CustomBotName\entities\User;
 use CustomBotName\entities\BotAuthorization;
 use CustomBotName\entities\UserAuthorization;
 use Restart;
-use CustomBotName\exceptions\process_exceptions\ProcessInputException;
+use CustomBotName\exceptions\state_exceptions\StateInputException;
 
 class Init {
 
@@ -119,7 +119,7 @@ class Init {
       $_Process = new Restart(self::$_Bot, self::$_User);
       $_Process->codeToRun();
       exit;
-    } catch(ProcessInputException $e) {
+    } catch(StateInputException $e) {
       /* command is not a restart command */
     }
   }
@@ -133,7 +133,7 @@ class Init {
     try {
       $_Process = new $process_name(self::$_Bot, self::$_User);
       $_Process->codeToRun(); // TODO: chand method name (maybe)
-    } catch(ProcessInputException $e) {
+    } catch(StateInputException $e) {
       self::$_Bot->sendMessage([
         'text' => $e->getMessage()
       ]);
