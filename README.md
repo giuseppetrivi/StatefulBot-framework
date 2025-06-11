@@ -13,7 +13,7 @@
 
 Through the [wiki](https://github.com/giuseppetrivi/telegram-bot-basic-project-structure/wiki) you'll find out how to use it, some basic architectural aspects and all the implementation specifications. <br>
 You'll finally understand how to use the framework to easily create complex Telegram Bots.
-<br>
+
 [Here](https://github.com/giuseppetrivi/OBCBot) an example of a Telegram Bot project made using StatefulBot.
 <br>
 <br>
