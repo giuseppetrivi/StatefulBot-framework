@@ -116,8 +116,8 @@ class Init {
    */
   private static function handleRestartCommand() {
     try {
-      $_Process = new Restart(self::$_Bot, self::$_User);
-      $_Process->codeToRun();
+      $_State = new Restart(self::$_Bot, self::$_User);
+      $_State->codeToRun();
       exit;
     } catch(StateInputException $e) {
       /* command is not a restart command */
@@ -125,14 +125,14 @@ class Init {
   }
 
   /**
-   * Handles the processes called by commands
+   * Handles the states called by commands
    */
   private static function handleCommand() {
-    $process_name = self::$_User->getProcessHandler()->getProcessName();
+    $state_name = self::$_User->getProcessHandler()->getProcessName();
     $process_name = "Main"; // to delete
     try {
-      $_Process = new $process_name(self::$_Bot, self::$_User);
-      $_Process->codeToRun(); // TODO: chand method name (maybe)
+      $_State = new $process_name(self::$_Bot, self::$_User);
+      $_State->codeToRun(); // TODO: change method name (maybe)
     } catch(StateInputException $e) {
       self::$_Bot->sendMessage([
         'text' => $e->getMessage()
