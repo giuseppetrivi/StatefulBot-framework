@@ -15,6 +15,7 @@ Through the [wiki](https://github.com/giuseppetrivi/telegram-bot-basic-project-s
 You'll finally understand how to use the framework to easily create complex Telegram Bots.
 <br>
 <br>
+[Here](https://github.com/giuseppetrivi/OBCBot) an example of a Telegram Bot project made using StatefulBot...
 
 ## 🤔 Understanding the state management problem
 
@@ -37,8 +38,11 @@ git clone https://github.com/giuseppetrivi/StatefulBot-framework.git
 ```
 - Create a Telegram Bot via [@BotFather](https://t.me/BotFather) ([here is a simple guide](https://deepakmohansingh.medium.com/how-to-build-a-telegram-bot-using-php-absolute-beginner-guide-f4262174442d)). 
 - Set the webhook to the `hook.php` file and fill the `config.json` file with necessary information (like Telegram Bot API token).
+<!--
 - Before making the first changes, choose your Telegram Bot name and execute the following command (using Git Bash) to change the main namespace name (better explained in [Chapter 3 of the wiki](https://github.com/giuseppetrivi/telegram-bot-basic-project-structure/wiki/Autoloaders)), putting it in the place of `<HERE_YOUR_BOT_NAME>`:
 ```bash
+-->
+
 cd /path/to/project/
 find . -type f -not -path ".git" -exec sed -i 's/CustomBotName/<HERE_YOUR_BOT_NAME>/g' {} \;
 ```
