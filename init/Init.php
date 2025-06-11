@@ -129,9 +129,9 @@ class Init {
    */
   private static function handleCommand() {
     $state_name = self::$_User->getProcessHandler()->getProcessName();
-    $process_name = "Main"; // to delete
+    $state_name = "Main"; // to delete
     try {
-      $_State = new $process_name(self::$_Bot, self::$_User);
+      $_State = new $state_name(self::$_Bot, self::$_User);
       $_State->codeToRun(); // TODO: change method name (maybe)
     } catch(StateInputException $e) {
       self::$_Bot->sendMessage([
