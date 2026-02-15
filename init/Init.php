@@ -12,6 +12,7 @@ use CustomBotName\entities\UserAuthorization;
 use Restart;
 use CustomBotName\exceptions\state_exceptions\StateInputException;
 use CustomBotName\control\StateID;
+use Telegram\Bot\Exceptions\TelegramBotNotFoundException;
 
 class Init {
 
@@ -61,7 +62,7 @@ class Init {
       $telegram_bot_api_token = self::$_Config->getTelegramBotApiToken();
       self::$_Bot = new TelegramBotSdkCustomInterface($telegram_bot_api_token);
     } catch(Exception $e) {
-      new Exception("Something went wrong in Bot instance initialization."); // da cambiare
+      new TelegramBotNotFoundException("Something went wrong in Bot instance initialization.");
     }
   }
 
@@ -133,7 +134,7 @@ class Init {
     $state_name = StateID::MAIN; // TODO to delete
     try {
       $_State = new $state_name(self::$_Bot, self::$_User);
-      $_State->run(); // TODO: change method name (maybe)
+      $_State->run();
     } catch(StateInputException $e) {
       self::$_Bot->sendMessage([
         'text' => $e->getMessage()
