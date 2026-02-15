@@ -1,8 +1,8 @@
 <?php
 
-use CustomBotName\view;
-use CustomBotName\control\AbstractState;
-use CustomBotName\view\Keyboards;
+use StatefulBotFramework\view;
+use StatefulBotFramework\control\AbstractState;
+use StatefulBotFramework\view\Keyboards;
 
 
 /**

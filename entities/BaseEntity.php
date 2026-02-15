@@ -1,9 +1,9 @@
 <?php
 
-namespace CustomBotName\entities;
+namespace StatefulBotFramework\entities;
 
 use Error;
-use CustomBotName\exceptions\BaseEntityException;
+use StatefulBotFramework\exceptions\BaseEntityException;
 
 
 /**

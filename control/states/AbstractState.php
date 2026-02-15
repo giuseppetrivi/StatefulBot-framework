@@ -1,9 +1,9 @@
 <?php
 
-namespace CustomBotName\control;
+namespace StatefulBotFramework\control;
 
-use CustomBotName\exceptions\state_exceptions\StateFunctionException;
-use CustomBotName\exceptions\state_exceptions\StateInputException;
+use StatefulBotFramework\exceptions\state_exceptions\StateFunctionException;
+use StatefulBotFramework\exceptions\state_exceptions\StateInputException;
 
 /**
  * Base class to handle states.

@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\view;
+namespace StatefulBotFramework\view;
 
 /**
  * Final class containing all menu options constants

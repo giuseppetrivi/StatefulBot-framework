@@ -2,8 +2,8 @@
 
 namespace FirstPath;
 
-use CustomBotName\control\AbstractState;
-use CustomBotName\view\MenuOptions;
+use StatefulBotFramework\control\AbstractState;
+use StatefulBotFramework\view\MenuOptions;
 
 class SameNameClass extends AbstractState {
 

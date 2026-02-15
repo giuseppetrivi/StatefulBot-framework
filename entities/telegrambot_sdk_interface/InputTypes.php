@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\entities\telegrambot_sdk_interface;
+namespace StatefulBotFramework\entities\telegrambot_sdk_interface;
 
 
 /**

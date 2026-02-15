@@ -1,8 +1,8 @@
 <?php
 
-namespace CustomBotName\config;
+namespace StatefulBotFramework\config;
 
-use CustomBotName\exceptions\ConfigurationException;
+use StatefulBotFramework\exceptions\ConfigurationException;
 
 
 /**

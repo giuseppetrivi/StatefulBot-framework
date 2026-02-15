@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\exceptions;
+namespace StatefulBotFramework\exceptions;
 
 use Exception;
 

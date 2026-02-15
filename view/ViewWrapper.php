@@ -1,9 +1,9 @@
 <?php
 
-namespace CustomBotName\view;
+namespace StatefulBotFramework\view;
 
 use Error;
-use CustomBotName\exceptions\ViewException;
+use StatefulBotFramework\exceptions\ViewException;
 use ReflectionClass;
 
 

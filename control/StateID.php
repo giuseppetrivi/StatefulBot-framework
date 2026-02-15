@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\control;
+namespace StatefulBotFramework\control;
 
 /**
  * Readonly class where the names of the states are stored, to make

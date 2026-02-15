@@ -1,9 +1,9 @@
 <?php
 
-use CustomBotName\view;
-use CustomBotName\control\AbstractState;
-use CustomBotName\control\StateID;
-use CustomBotName\view\Keyboards;
+use StatefulBotFramework\view;
+use StatefulBotFramework\control\AbstractState;
+use StatefulBotFramework\control\StateID;
+use StatefulBotFramework\view\Keyboards;
 
 
 /**

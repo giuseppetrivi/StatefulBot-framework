@@ -1,11 +1,11 @@
 <?php
 
-namespace CustomBotName\entities;
+namespace StatefulBotFramework\entities;
 
-use CustomBotName\exceptions\RuleException;
-use CustomBotName\entities\authorization_rules\Rule;
-use CustomBotName\entities\authorization_rules\CheckIfUserIsActiveRule;
-use CustomBotName\entities\authorization_rules\CheckIfUserIsSubscribedRule;
+use StatefulBotFramework\exceptions\RuleException;
+use StatefulBotFramework\entities\authorization_rules\Rule;
+use StatefulBotFramework\entities\authorization_rules\CheckIfUserIsActiveRule;
+use StatefulBotFramework\entities\authorization_rules\CheckIfUserIsSubscribedRule;
 
 
 /**

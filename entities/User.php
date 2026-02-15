@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\entities;
+namespace StatefulBotFramework\entities;
 
 
 /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace CustomBotName\entities;
+namespace StatefulBotFramework\entities;
 
-use CustomBotName\exceptions\RuleException;
-use CustomBotName\config\ConfigurationHandler;
-use CustomBotName\entities\authorization_rules\Rule;
-use CustomBotName\entities\authorization_rules\CheckIfBotIsOpenToAccessRule;
+use StatefulBotFramework\exceptions\RuleException;
+use StatefulBotFramework\config\ConfigurationHandler;
+use StatefulBotFramework\entities\authorization_rules\Rule;
+use StatefulBotFramework\entities\authorization_rules\CheckIfBotIsOpenToAccessRule;
 
 
 /**

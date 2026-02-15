@@ -1,4 +1,6 @@
 {
+  "bot_name": "StatefulBotFramework",
+
   "production": {
     "TELEGRAM_BOT_API_TOKEN": "<YOUR-TELEGRAM-BOT-API-TOKEN>",
     "OPEN_ACCESS_TO_BOT": 0,

@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomBotName\entities\authorization_rules;
+namespace StatefulBotFramework\entities\authorization_rules;
 
 
 /**

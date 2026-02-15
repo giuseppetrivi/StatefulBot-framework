@@ -1,17 +1,17 @@
 <?php
 
-namespace CustomBotName\init;
+namespace StatefulBotFramework\init;
 
 use DB;
 use Exception;
-use CustomBotName\config\ConfigurationHandler;
-use CustomBotName\entities\telegrambot_sdk_interface\TelegramBotSdkCustomInterface;
-use CustomBotName\entities\User;
-use CustomBotName\entities\BotAuthorization;
-use CustomBotName\entities\UserAuthorization;
+use StatefulBotFramework\config\ConfigurationHandler;
+use StatefulBotFramework\entities\telegrambot_sdk_interface\TelegramBotSdkCustomInterface;
+use StatefulBotFramework\entities\User;
+use StatefulBotFramework\entities\BotAuthorization;
+use StatefulBotFramework\entities\UserAuthorization;
 use Restart;
-use CustomBotName\exceptions\state_exceptions\StateInputException;
-use CustomBotName\control\StateID;
+use StatefulBotFramework\exceptions\state_exceptions\StateInputException;
+use StatefulBotFramework\control\StateID;
 use Telegram\Bot\Exceptions\TelegramBotNotFoundException;
 
 class Init {

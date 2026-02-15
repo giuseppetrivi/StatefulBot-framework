@@ -8,7 +8,7 @@ require_once __DIR__ . "/project_autoloader.php";
 require_once __DIR__ . "/control/states_autoloader.php";
 
 
-use CustomBotName\init\Init;
+use StatefulBotFramework\init\Init;
 
 
 $development_mode = "testing";
