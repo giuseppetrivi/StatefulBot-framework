@@ -14,7 +14,7 @@ class CheckIfBotIsOpenToAccessRule extends Rule {
     parent::__construct($_Config);
   }
 
-  public function rule() {
+  public function rule(): bool {
     $_Config = $this->getValidationClass();
     if ($_Config->getOpenAccessToBot()) {
       return true;

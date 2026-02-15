@@ -14,13 +14,11 @@ class RuleClassExample extends Rule {
   }
   */
 
-  public function rule() {
-    /*
-      if (something) {
-        return true;
-      }
-      return false;
-    */
+  public function rule(): bool {
+    if (true) {
+      return true;
+    }
+    return false;
   }
 
 }

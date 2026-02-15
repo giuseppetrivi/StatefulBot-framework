@@ -14,7 +14,7 @@ class CheckIfUserIsActiveRule extends Rule {
     parent::__construct($_User);
   }
 
-  public function rule() {
+  public function rule(): bool {
     $_User = $this->getValidationClass();
     if ($_User->isActive()) {
       return true;

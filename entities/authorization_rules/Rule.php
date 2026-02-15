@@ -22,7 +22,7 @@ abstract class Rule extends BaseEntity {
    * 
    * @return bool
    */
-  abstract public function rule();
+  abstract public function rule(): bool;
 
 
   /**
