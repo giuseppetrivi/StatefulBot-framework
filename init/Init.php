@@ -62,7 +62,8 @@ class Init {
       $telegram_bot_api_token = self::$_Config->getTelegramBotApiToken();
       self::$_Bot = new TelegramBotSdkCustomInterface($telegram_bot_api_token);
     } catch(Exception $e) {
-      new TelegramBotNotFoundException("Something went wrong in Bot instance initialization.");
+      print($e->getMessage());
+      throw new TelegramBotNotFoundException("Something went wrong in Bot instance initialization.");
     }
   }
 

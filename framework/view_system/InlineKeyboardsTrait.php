@@ -1,6 +1,6 @@
 <?php
 
-namespace StatefulBotFramework\view;
+namespace StatefulBotFramework\framework\view_system;
 
 use Telegram\Bot\Keyboard\Keyboard;
 

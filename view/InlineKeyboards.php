@@ -2,6 +2,10 @@
 
 namespace StatefulBotFramework\view;
 
+use StatefulBotFramework\framework\view_system\ViewWrapper;
+use StatefulBotFramework\framework\view_system\InlineKeyboardsTrait;
+
+
 /**
  * Class to handle all inline keyboards 
  */

@@ -2,7 +2,7 @@
 
 namespace FirstPath;
 
-use StatefulBotFramework\control\AbstractState;
+use StatefulBotFramework\framework\state_control\AbstractState;
 use StatefulBotFramework\view\MenuOptions;
 
 class SameNameClass extends AbstractState {

@@ -1,7 +1,7 @@
 <?php
 
 use StatefulBotFramework\view;
-use StatefulBotFramework\control\AbstractState;
+use StatefulBotFramework\framework\state_control\AbstractState;
 use StatefulBotFramework\view\Keyboards;
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace StatefulBotFramework\control;
+namespace StatefulBotFramework\framework\state_control;
 
 use StatefulBotFramework\exceptions\state_exceptions\StateFunctionException;
 use StatefulBotFramework\exceptions\state_exceptions\StateInputException;

@@ -9,7 +9,7 @@ spl_autoload_register(function($class) {
   $count_substates = count($exploded_classname);
   $relative_classname = $exploded_classname[$count_substates - 1];
 
-  $directory_where_search = __DIR__ . DIRECTORY_SEPARATOR . "states" . DIRECTORY_SEPARATOR;
+  $directory_where_search = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "control" . DIRECTORY_SEPARATOR . "states" . DIRECTORY_SEPARATOR;
 
   $_RDI = new RecursiveDirectoryIterator($directory_where_search);
   $_RII = new RecursiveIteratorIterator($_RDI);

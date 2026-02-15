@@ -2,6 +2,9 @@
 
 namespace StatefulBotFramework\view;
 
+use StatefulBotFramework\framework\view_system\ViewWrapper;
+use StatefulBotFramework\framework\view_system\KeyboardsTrait;
+
 
 /**
  * Class to handle all keyboards
