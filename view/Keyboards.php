@@ -12,10 +12,12 @@ use StatefulBotFramework\framework\view_system\KeyboardsTrait;
 class Keyboards extends ViewWrapper {
 
   public const MAIN_MENU = [
-    [MenuOptions::COMMAND_START, MenuOptions::COMMAND_RESTART]
+    [MenuOptions::COMMAND_START, MenuOptions::COMMAND_RESTART],
+    [MenuOptions::COMMAND_FIRST_PATH, MenuOptions::COMMAND_SECOND_PATH]
   ];
 
   public const ONLY_BACK = [
+    [MenuOptions::COMMAND_FINAL_STATE],
     [MenuOptions::BACK]
   ];
 

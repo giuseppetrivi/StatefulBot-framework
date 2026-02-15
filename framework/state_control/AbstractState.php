@@ -45,6 +45,9 @@ abstract class AbstractState {
    */
   protected string|null $state_data = null;
 
+  /** ... */
+  protected StatePathManager $_StatePath;
+
   /**
    * @param TelegramBotSdkCustomInterface $_Bot
    * @param User $_User
@@ -52,6 +55,8 @@ abstract class AbstractState {
   public function __construct($_Bot, $_User) {
     $this->_Bot = $_Bot;
     $this->_User = $_User;
+    $this->_StatePath = new StatePathManager(get_class($this));
+
   }
   
 
@@ -112,7 +117,7 @@ abstract class AbstractState {
   /**
    * Keeps the actual state
    */
-  protected function keepThisState() {
+  protected function keepActualState() {
     $this->state_name = get_class($this);
   }
 
@@ -129,8 +134,7 @@ abstract class AbstractState {
    * state (eventually also with data)
    */
   private function changeState() {
-    $this->_User->getStateHandler()->updateState($this->state_name);
-    $this->_User->getStateHandler()->updateState($this->state_data);
+    $this->_User->getStateHandler()->updateState($this->state_name, $this->state_data);
   }
 
 
@@ -172,7 +176,7 @@ abstract class AbstractState {
    * Empty procedure to simply not do anything
    */
   protected function emptyProcedure() {
-    $this->keepThisState();
+    $this->keepActualState();
   }
 
   /**
