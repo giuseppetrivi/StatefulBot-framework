@@ -5,7 +5,7 @@ namespace StatefulBotFramework\view;
 /**
  * Final class containing all menu options constants
  */
-final class MenuOptions {
+final readonly class MenuOptions {
 
   public const COMMAND_START = '/start';
   public const COMMAND_RESTART = '/restart';
