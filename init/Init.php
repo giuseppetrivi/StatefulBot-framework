@@ -11,6 +11,7 @@ use CustomBotName\entities\BotAuthorization;
 use CustomBotName\entities\UserAuthorization;
 use Restart;
 use CustomBotName\exceptions\state_exceptions\StateInputException;
+use CustomBotName\control\StateID;
 
 class Init {
 
@@ -129,7 +130,7 @@ class Init {
    */
   private static function handleCommand() {
     $state_name = self::$_User->getStateHandler()->getStateName();
-    $state_name = "Main"; // TODO to delete
+    $state_name = StateID::MAIN; // TODO to delete
     try {
       $_State = new $state_name(self::$_Bot, self::$_User);
       $_State->codeToRun(); // TODO: change method name (maybe)

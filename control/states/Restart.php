@@ -2,6 +2,7 @@
 
 use CustomBotName\view;
 use CustomBotName\control\AbstractState;
+use CustomBotName\control\StateID;
 use CustomBotName\view\Keyboards;
 
 
@@ -24,6 +25,8 @@ class Restart extends AbstractState {
       'text' => "This is the forced restart of the bot...",
       'reply_markup' => Keyboards::getMainMenu()
     ]);
+
+    $this->setNextState(StateID::MAIN);
   }
 
 
