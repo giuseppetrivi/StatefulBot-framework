@@ -118,7 +118,7 @@ class Init {
   private static function handleRestartCommand() {
     try {
       $_State = new Restart(self::$_Bot, self::$_User);
-      $_State->codeToRun();
+      $_State->run();
       exit;
     } catch(StateInputException $e) {
       /* command is not a restart command */
@@ -133,7 +133,7 @@ class Init {
     $state_name = StateID::MAIN; // TODO to delete
     try {
       $_State = new $state_name(self::$_Bot, self::$_User);
-      $_State->codeToRun(); // TODO: change method name (maybe)
+      $_State->run(); // TODO: change method name (maybe)
     } catch(StateInputException $e) {
       self::$_Bot->sendMessage([
         'text' => $e->getMessage()

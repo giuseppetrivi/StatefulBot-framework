@@ -187,7 +187,7 @@ abstract class AbstractState {
    * Function visible from outside the boundaries of State class
    * that executes the code with pre and post-conditions
    */
-  public function codeToRun() {
+  public function run() {
     $this->preConditionInput();
     $this->mainCode();
     $this->postConditionState();
