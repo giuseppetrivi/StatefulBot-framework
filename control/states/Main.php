@@ -26,8 +26,6 @@ class Main extends AbstractState {
       'text' => "Hello my friend, this is the start message!",
       'reply_markup' => Keyboards::getMainMenu()
     ]);
-
-    $this->keepActualState();
   }
 
 

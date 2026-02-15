@@ -39,7 +39,7 @@ abstract class AbstractState {
    * the state record in the database. This means that the next
    * state will be the start menu
    */
-  protected string|null $state_name = null;
+  protected string $state_name;
   /**
    * Data to be setted fo the next state. If null, it will be empty
    */
@@ -57,6 +57,8 @@ abstract class AbstractState {
     $this->_User = $_User;
     $this->_StatePath = new StatePathManager(get_class($this));
 
+    /* by default this is the actual state path name*/
+    $this->state_name = $this->_StatePath->getStatePathName();
   }
   
 
@@ -87,38 +89,6 @@ abstract class AbstractState {
    */
   protected function validateDynamicInputs() {
     return false;
-  }
-
-
-  /**
-   * From the name of the state, deletes the last one to get
-   * the previous state name
-   * 
-   * @return array
-   */
-  protected function getPreviousState() {
-    $classname_complete = get_class($this);
-
-    $array_pf_states = explode("\\", $classname_complete);
-    array_pop($array_pf_states);
-    return implode("\\", $array_pf_states);
-  }
-
-  /**
-   * Append the parameter "next_state" to the actual state
-   * 
-   * @param string $next_state
-   * @return string
-   */
-  protected function appendNextState($next_state) {
-    return get_class($this) . "\\" . $next_state;
-  }
-
-  /**
-   * Keeps the actual state
-   */
-  protected function keepActualState() {
-    $this->state_name = get_class($this);
   }
 
   /**
@@ -168,7 +138,8 @@ abstract class AbstractState {
    * There is the standard call to the function to execute setted
    * by the pre-condition check
    */
-  protected function mainCode() {
+  protected function executeProcedure() {
+    // TODO aggiungere anche gli argomenti ed usare l'operatore spread (...)
     call_user_func(array($this, $this->function_to_call));
   }
 
@@ -176,7 +147,7 @@ abstract class AbstractState {
    * Empty procedure to simply not do anything
    */
   protected function emptyProcedure() {
-    $this->keepActualState();
+    // TODO da eliminare probabilmente
   }
 
   /**
@@ -193,7 +164,7 @@ abstract class AbstractState {
    */
   public function run() {
     $this->preConditionInput();
-    $this->mainCode();
+    $this->executeProcedure();
     $this->postConditionState();
   }
 
