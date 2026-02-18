@@ -1,7 +1,7 @@
 <?php
 
 namespace StatefulBotFramework\framework\state_control;
-use Exception; // TODO da inserire exception specifica
+use StatefulBotFramework\exceptions\state_exceptions\StatePathNavigationException;
 
 class StatePathManager {
 
@@ -25,9 +25,7 @@ class StatePathManager {
     array_splice($array_pf_states, -$back_of);
     $state_result = implode("\\", $array_pf_states);
     if (!isset($state_result) && $state_result==='') {
-      // TODO cambiare questa exception
-      throw new Exception("Error in getting the previous state");
-      //return '';
+      throw new StatePathNavigationException();
     }
     return $state_result;
   }
@@ -52,9 +50,7 @@ class StatePathManager {
     $array_pf_states = explode("\\", $this->state_path);
     $state_name = array_pop($array_pf_states);
     if (!isset($state_name) && $state_name==='') {
-      // TODO cambiare questa exception
-      throw new Exception("Error in getting the actuale state");
-      //return '';
+      throw new StatePathNavigationException();
     }
     return $state_name;
   }
