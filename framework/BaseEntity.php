@@ -1,8 +1,7 @@
 <?php
 
-namespace StatefulBotFramework\entities;
+namespace StatefulBotFramework\framework;
 
-use Error;
 use StatefulBotFramework\exceptions\BaseEntityException;
 
 

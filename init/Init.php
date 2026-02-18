@@ -5,7 +5,7 @@ namespace StatefulBotFramework\init;
 use DB;
 use Exception;
 use StatefulBotFramework\config\ConfigurationHandler;
-use StatefulBotFramework\entities\telegrambot_sdk_interface\TelegramBotSdkCustomInterface;
+use StatefulBotFramework\framework\bot_interface\TelegramBotSdkCustomInterface;
 use StatefulBotFramework\entities\User;
 use StatefulBotFramework\entities\BotAuthorization;
 use StatefulBotFramework\entities\UserAuthorization;

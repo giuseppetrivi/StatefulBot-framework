@@ -1,8 +1,8 @@
 <?php
 
-namespace StatefulBotFramework\entities\telegrambot_sdk_interface;
+namespace StatefulBotFramework\framework\bot_interface;
 
-use StatefulBotFramework\entities\BaseEntity;
+use StatefulBotFramework\framework\BaseEntity;
 
 
 /**

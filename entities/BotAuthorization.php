@@ -2,9 +2,10 @@
 
 namespace StatefulBotFramework\entities;
 
+use StatefulBotFramework\framework\BaseEntity;
 use StatefulBotFramework\exceptions\RuleException;
 use StatefulBotFramework\config\ConfigurationHandler;
-use StatefulBotFramework\entities\authorization_rules\Rule;
+use StatefulBotFramework\framework\rules_system\Rule;
 use StatefulBotFramework\entities\authorization_rules\CheckIfBotIsOpenToAccessRule;
 
 

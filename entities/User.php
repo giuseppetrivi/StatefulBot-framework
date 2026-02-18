@@ -2,6 +2,8 @@
 
 namespace StatefulBotFramework\entities;
 
+use StatefulBotFramework\framework\BaseEntity;
+
 
 /**
  * Class to handle all attributes of the user

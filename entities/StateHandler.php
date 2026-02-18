@@ -2,6 +2,7 @@
 
 namespace StatefulBotFramework\entities;
 
+use StatefulBotFramework\framework\BaseEntity;
 use DB;
 
 

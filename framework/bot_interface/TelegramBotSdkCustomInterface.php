@@ -1,12 +1,10 @@
 <?php
 
-namespace StatefulBotFramework\entities\telegrambot_sdk_interface;
+namespace StatefulBotFramework\framework\bot_interface;
 
 use StatefulBotFramework\exceptions\TelegramBotInterfaceException;
-use Psr\Http\Message\RequestInterface;
 use Telegram\Bot\Api;
 use Telegram\Bot\HttpClients\HttpClientInterface;
-use Telegram\Bot\Objects\Update;
 use Telegram\Bot\TelegramResponse;
 
 

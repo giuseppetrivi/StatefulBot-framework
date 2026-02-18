@@ -1,9 +1,9 @@
 <?php
 
-namespace StatefulBotFramework\entities\authorization_rules;
+namespace StatefulBotFramework\framework\rules_system;
 
 use ReflectionClass;
-use StatefulBotFramework\entities\BaseEntity;
+use StatefulBotFramework\framework\BaseEntity;
 
 
 /**

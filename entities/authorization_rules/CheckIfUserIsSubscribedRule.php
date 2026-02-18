@@ -3,7 +3,7 @@
 namespace StatefulBotFramework\entities\authorization_rules;
 
 use StatefulBotFramework\entities\User;
-
+use StatefulBotFramework\framework\rules_system\Rule;
 
 /**
  * Rule to check if the user is subscripted to bot (from user info)

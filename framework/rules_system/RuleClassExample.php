@@ -1,6 +1,6 @@
 <?php
 
-namespace StatefulBotFramework\entities\authorization_rules;
+namespace StatefulBotFramework\framework\rules_system;
 
 
 /**

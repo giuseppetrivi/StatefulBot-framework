@@ -3,7 +3,7 @@
 namespace StatefulBotFramework\entities\authorization_rules;
 
 use StatefulBotFramework\config\ConfigurationHandler;
-
+use StatefulBotFramework\framework\rules_system\Rule;
 
 /**
  * Rule to check if the bot is open to users accesses (from config file)

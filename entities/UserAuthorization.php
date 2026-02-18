@@ -2,8 +2,9 @@
 
 namespace StatefulBotFramework\entities;
 
+use StatefulBotFramework\framework\BaseEntity;
 use StatefulBotFramework\exceptions\RuleException;
-use StatefulBotFramework\entities\authorization_rules\Rule;
+use StatefulBotFramework\framework\rules_system\Rule;
 use StatefulBotFramework\entities\authorization_rules\CheckIfUserIsActiveRule;
 use StatefulBotFramework\entities\authorization_rules\CheckIfUserIsSubscribedRule;
 
