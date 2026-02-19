@@ -2,7 +2,7 @@
 
 use StatefulBotFramework\control\StateID;
 use StatefulBotFramework\view;
-use StatefulBotFramework\framework\state_control\AbstractState;
+use StatefulBotFramework\framework\state_logic\AbstractState;
 use StatefulBotFramework\view\Keyboards;
 
 
@@ -11,11 +11,21 @@ use StatefulBotFramework\view\Keyboards;
  */
 class Main extends AbstractState {
 
-  protected array $valid_static_inputs = [
-    view\MenuOptions::COMMAND_START => "startProcedure",
-    view\MenuOptions::COMMAND_FIRST_PATH => "firstPathProcedure",
-    view\MenuOptions::COMMAND_SECOND_PATH => "secondPathProcedure"
-  ];
+
+  protected function defineStaticInputs() {
+    $this->addStaticInput(
+      view\MenuOptions::COMMAND_START,
+      "startprocedure"
+    );
+    $this->addStaticInput(
+      view\MenuOptions::COMMAND_FIRST_PATH,
+      "firstPathProcedure"
+    );
+    $this->addStaticInput(
+      view\MenuOptions::COMMAND_SECOND_PATH,
+      "secondPathProcedure"
+    );
+  }
 
 
   /**

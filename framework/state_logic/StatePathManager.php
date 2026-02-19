@@ -1,6 +1,6 @@
 <?php
 
-namespace StatefulBotFramework\framework\state_control;
+namespace StatefulBotFramework\framework\state_logic;
 use StatefulBotFramework\exceptions\state_exceptions\StatePathNavigationException;
 
 class StatePathManager {

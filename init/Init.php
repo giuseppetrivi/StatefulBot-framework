@@ -5,7 +5,7 @@ namespace StatefulBotFramework\init;
 use DB;
 use Exception;
 use StatefulBotFramework\config\ConfigurationHandler;
-use StatefulBotFramework\framework\bot_interface\TelegramBotSdkCustomInterface;
+use StatefulBotFramework\framework\bot_interface\TGBotInterface;
 use StatefulBotFramework\entities\User;
 use StatefulBotFramework\entities\BotAuthorization;
 use StatefulBotFramework\entities\UserAuthorization;
@@ -17,7 +17,7 @@ use Telegram\Bot\Exceptions\TelegramBotNotFoundException;
 class Init {
 
   private static ConfigurationHandler $_Config;
-  private static TelegramBotSdkCustomInterface $_Bot;
+  private static TGBotInterface $_Bot;
   private static User $_User;
 
 
@@ -60,7 +60,7 @@ class Init {
   private static function initializeBotSdk() {
     try {
       $telegram_bot_api_token = self::$_Config->getTelegramBotApiToken();
-      self::$_Bot = new TelegramBotSdkCustomInterface($telegram_bot_api_token);
+      self::$_Bot = new TGBotInterface($telegram_bot_api_token);
     } catch(Exception $e) {
       print($e->getMessage());
       throw new TelegramBotNotFoundException("Something went wrong in Bot instance initialization.");

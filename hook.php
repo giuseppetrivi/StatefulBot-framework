@@ -5,7 +5,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 /** autoload for project's files */
 require_once __DIR__ . "/project_autoloader.php";
 /** autoload for states (that have different rules of autoloading and namespace handling) */
-require_once __DIR__ . "/framework/state_control/states_autoloader.php";
+require_once __DIR__ . "/framework/state_logic/states_autoloader.php";
 
 
 use StatefulBotFramework\init\Init;

@@ -1,7 +1,7 @@
 <?php
 
 use StatefulBotFramework\view;
-use StatefulBotFramework\framework\state_control\AbstractState;
+use StatefulBotFramework\framework\state_logic\AbstractState;
 use StatefulBotFramework\control\StateID;
 use StatefulBotFramework\view\Keyboards;
 
@@ -11,9 +11,13 @@ use StatefulBotFramework\view\Keyboards;
  */
 class Restart extends AbstractState {
 
-  protected array $valid_static_inputs = [
-    view\MenuOptions::COMMAND_RESTART => "restartProcedure"
-  ];
+
+  protected function defineStaticInputs() {
+    $this->addStaticInput(
+      view\MenuOptions::COMMAND_RESTART,
+      "restartProcedure"
+    );
+  }
 
 
   /**

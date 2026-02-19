@@ -15,7 +15,7 @@ use Telegram\Bot\TelegramResponse;
  * 
  * Class to have some default behaviors in Telegram Bot API
  */
-class TelegramBotSdkCustomInterface extends Api {
+class TGBotInterface extends Api {
 
   private ?InputFromChat $_InputFromChat = null;
 

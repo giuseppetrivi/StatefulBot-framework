@@ -73,7 +73,7 @@ $use_line = '';
 $parent_short = $extend;
 if (strpos($extend, '\\') === false) {
 	// AbstractState is under CustomBotName\control
-	$use_line = "use StatefulBotFramework\\control\\$extend;";
+	$use_line = "use StatefulBotFramework\\framework\\state_logic\\$extend;";
 	$parent_short = $extend;
 } else {
 	// fully-qualified given
@@ -112,10 +112,12 @@ if ($doc_desc !== null) {
 }
 $content_lines[] = "class $name extends $parent_short {";
 $content_lines[] = "";
-$content_lines[] = "  protected array \$valid_static_inputs = [];";
+$content_lines[] = "  protected function defineStaticInputs() {}";
+$content_lines[] = "  	\$this->addStaticInput(\"command\", \"xProcedure\")";
+$content_lines[] = "  }";
 $content_lines[] = "";
-$content_lines[] = "  protected function mainCode() {";
-$content_lines[] = "    echo \"sono dentro a \" . get_class(\$this);";
+$content_lines[] = "  protected function xProcedure() {";
+$content_lines[] = "    // procedure to implement";
 $content_lines[] = "  }";
 $content_lines[] = "";
 $content_lines[] = "}";
